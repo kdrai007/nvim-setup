@@ -18,6 +18,10 @@ return require('packer').startup(function(use)
 	use('theprimeagen/harpoon')
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
+    use{
+        "windwp/nvim-autopairs",
+        config=function()require("nvim-autopairs").setup{} end
+    }
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v1.x',
@@ -40,5 +44,8 @@ return require('packer').startup(function(use)
 
 			{'rafamadriz/friendly-snippets'},
 		}
-	}	
+	}
+    use {
+        "norcalli/nvim-colorizer.lua"
+    }
 end)
