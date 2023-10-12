@@ -49,7 +49,11 @@ return require('packer').startup(function(use)
         "norcalli/nvim-colorizer.lua"
     }
     use {
-         'nvim-lualine/lualine.nvim',
-         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+         'nvim-lualine/lualine.nvim'
     }
+    use {
+        'nvim-tree/nvim-tree.lua'
+    }
+    use{"nvim-tree/nvim-web-devicons"}
+    use 'rcarriga/nvim-notify'
 end)
