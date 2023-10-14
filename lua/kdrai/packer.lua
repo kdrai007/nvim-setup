@@ -18,10 +18,9 @@ return require('packer').startup(function(use)
 	use('theprimeagen/harpoon')
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
-    use{
-        "windwp/nvim-autopairs",
-        config=function()require("nvim-autopairs").setup{} end
-    }
+    use(
+    "windwp/nvim-autopairs")
+    use ("windwp/nvim-ts-autotag")
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v1.x',
@@ -56,4 +55,15 @@ return require('packer').startup(function(use)
     }
     use{"nvim-tree/nvim-web-devicons"}
     use 'rcarriga/nvim-notify'
+    use({
+        "utilyre/barbecue.nvim",
+        tag = "*",
+        requires = {
+            "SmiteshP/nvim-navic",
+        },
+    --    after = "nvim-web-devicons", -- keep this if you're using NvChad
+        config = function()
+            require("barbecue").setup()
+        end,
+    })
 end)
