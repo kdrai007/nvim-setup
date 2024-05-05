@@ -45,7 +45,7 @@ return require('packer').startup(function(use)
 		}
 	}
     use {
-        "norcalli/nvim-colorizer.lua"
+        'NvChad/nvim-colorizer.lua'
     }
     use {
          'nvim-lualine/lualine.nvim'
@@ -54,7 +54,7 @@ return require('packer').startup(function(use)
         'nvim-tree/nvim-tree.lua'
     }
     use{"nvim-tree/nvim-web-devicons"}
-    use 'rcarriga/nvim-notify'
+   use 'rcarriga/nvim-notify'
     use({
         "utilyre/barbecue.nvim",
         tag = "*",
@@ -66,4 +66,5 @@ return require('packer').startup(function(use)
             require("barbecue").setup()
         end,
     })
-end)
+
+ end)
